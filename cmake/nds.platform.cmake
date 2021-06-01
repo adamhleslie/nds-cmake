@@ -2,16 +2,15 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION r54-3)
 set(CMAKE_SYSTEM_PROCESSOR arm-eabi)
 
-set(DEVKITPRO $ENV{DEVKITPRO})
-set(DEVKITARM $ENV{DEVKITARM})
-
-if(NOT DEVKITPRO)
+if(NOT DEFINED ENV{DEVKITPRO})
     message(FATAL_ERROR "Please set DEVKITPRO in your environment")
 endif()
+set(DEVKITPRO $ENV{DEVKITPRO})
 
-if(NOT DEVKITARM)
+if(NOT DEFINED ENV{DEVKITARM})
     message(FATAL_ERROR "Please set DEVKITARM in your environment")
 endif()
+set(DEVKITARM $ENV{DEVKITARM})
 
 set(LIBNDS ${DEVKITPRO}/libnds)
 
