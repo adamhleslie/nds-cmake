@@ -11,7 +11,10 @@ message(STATUS "Using C compiler: " ${CMAKE_C_COMPILER})
 message(STATUS "Using C++ compiler: " ${CMAKE_CXX_COMPILER})
 
 # PROJECT #
-project("$ENV{projectName}")
+if(NOT DEFINED ENV{PROJECT})
+    message(FATAL_ERROR "Please set PROJECT in your environment")
+endif()
+project("$ENV{PROJECT}")
 
 # Compiler Flags
 set(warning_flags "-Winline -Wall -Wextra")
