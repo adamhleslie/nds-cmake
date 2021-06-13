@@ -53,5 +53,4 @@ add_subdirectory(arm9)
 
 # ndstool - .nds executable
 include(nds.ndstool)
-set(NDS_TARGET_NAME "${PROJECT_NAME}")
-add_nds_target(${NDS_TARGET_NAME} ${ARM7_TARGET_NAME} ${ARM9_TARGET_NAME} "FALSE" "arm7/${ARM7_TARGET_NAME}" "arm9/${ARM9_TARGET_NAME}" ${PROJECT_NAME})
+add_nds_target(${PROJECT_NAME} ${ARM7_TARGET_NAME} ${ARM9_TARGET_NAME} "FALSE" "arm7/${ARM7_TARGET_NAME}" "arm9/${ARM9_TARGET_NAME}")

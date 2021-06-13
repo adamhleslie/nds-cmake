@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeSharedSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.nds.cmake -DCMAKE_BUILD_TYPE=Debug" GENERATION_DIR="out/cmake-build-debug" ENABLED="true">
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.nds.cmake -DCMAKE_BUILD_TYPE=Debug" GENERATION_DIR="out/debug" ENABLED="true">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
             <env name="DEVKITPRO" value="/opt/devkitpro" />
@@ -10,7 +10,7 @@
           </envs>
         </ADDITIONAL_GENERATION_ENVIRONMENT>
       </configuration>
-      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.nds.cmake -DCMAKE_BUILD_TYPE=Release" GENERATION_DIR="out/cmake-build-release" ENABLED="true">
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.nds.cmake -DCMAKE_BUILD_TYPE=Release" GENERATION_DIR="out/release" ENABLED="true">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
             <env name="DEVKITPRO" value="/opt/devkitpro" />
