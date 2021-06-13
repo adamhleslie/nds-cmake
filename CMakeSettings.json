@@ -2,9 +2,9 @@
     "environments": [
         {
             "DEVKITPRO": "/opt/devkitpro",
-            "PROJECT": null, // "PROJECT NAME HERE",
-            "desmumeExe": null, // "WINDOWS PATH TO DESMUME-DEV+ EXECUTABLE",
-            "gdbExe": null, // "WINDOWS PATH TO GDB EXECUTABLE: C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\VC\\Linux\\bin\\gdb\\8.1\\arm-linux-gnueabihf-gdb.exe",
+            "PROJECT": // "PROJECT NAME HERE",
+            "desmumeExe": // "WINDOWS PATH TO DESMUME-DEV+ EXECUTABLE",
+            "gdbExe": // "WINDOWS PATH TO GDB EXECUTABLE: C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\VC\\Linux\\bin\\gdb\\8.1\\arm-linux-gnueabihf-gdb.exe",
             "gdbPort": "3333"
         }
     ],

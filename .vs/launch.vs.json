@@ -21,7 +21,7 @@
                     "ignoreFailures": true
                 },
                 {
-                    "text": "shell start \"\" ${env.desmumeExe} \"${env.ndsExe}\" --arm9gdb ${env.gdbPort}",
+                    "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm9gdb ${env.gdbPort}",
                     "ignoreFailures": false
                 }
             ],
@@ -51,7 +51,7 @@
                     "ignoreFailures": true
                 },
                 {
-                    "text": "shell start \"\" ${env.desmumeExe} \"${env.ndsExe}\" --arm7gdb ${env.gdbPort}",
+                    "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm7gdb ${env.gdbPort}",
                     "ignoreFailures": false
                 }
             ],
