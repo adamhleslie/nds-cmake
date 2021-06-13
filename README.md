@@ -5,5 +5,3 @@ Homebrew Nintendo DS build system
 PROJECT = The name of your project
 
 DEVKITPRO = The install directory of devkitpro
-
-DEVKITARM = The install directory of devkitARM
