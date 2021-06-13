@@ -1,0 +1,11 @@
+# Visual Studio
+.vs/
+!.vs/launch.vs.json
+
+# CLion
+.idea/
+.idea/cmake.xml
+
+# Project output
+gen/
+out/

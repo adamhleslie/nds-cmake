@@ -1,17 +1,12 @@
-# IN: Requires DEVKITPRO to be defined
-# OUT: Defines add_grit_target macro
-
-if(NOT DEVKITPRO)
-    message(FATAL_ERROR "Please set DEVKITPRO before including")
-endif()
+# OUT: Defines add_grit_target function for handling png image files
 
 if(NOT GRIT_EXE)
     message(STATUS "Looking for grit")
-    find_program(GRIT_EXE grit ${DEVKITPRO}/tools/bin NO_DEFAULT_PATH)
+    find_program(GRIT_EXE grit)
     if(GRIT_EXE)
         message(STATUS "    Found -- ${GRIT_EXE}")
     else()
-        message(FATAL_ERROR "    Could not find at path -- ${DEVKITPRO}/tools/bin")
+        message(FATAL_ERROR "    Could not find grit")
     endif()
 endif()
 

@@ -1,12 +1,16 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.18)
+
+# Enable new optimized variable evaluation
 cmake_policy(SET CMP0053 NEW)
 
 # Enable the next line to see the actual commands run when building etc.
-# set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
-# Set up toolchain
+# Log active toolchain
+message(STATUS "Using toolchain file: ${CMAKE_TOOLCHAIN_FILE}")
+
+# Set the default search path for modules when using include / find_package
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-include(nds.platform) # TODO: Replace this with proper toolchain usage (cmd line argument)
 message(STATUS "Using C compiler: " ${CMAKE_C_COMPILER})
 message(STATUS "Using C++ compiler: " ${CMAKE_CXX_COMPILER})
 
@@ -50,4 +54,4 @@ add_subdirectory(arm9)
 # ndstool - .nds executable
 include(nds.ndstool)
 set(NDS_TARGET_NAME "${PROJECT_NAME}")
-add_nds_target(${NDS_TARGET_NAME} "FALSE" "arm7/${ARM7_TARGET_NAME}" "arm9/${ARM9_TARGET_NAME}" ${PROJECT_NAME})
+add_nds_target(${NDS_TARGET_NAME} ${ARM7_TARGET_NAME} ${ARM9_TARGET_NAME} "FALSE" "arm7/${ARM7_TARGET_NAME}" "arm9/${ARM9_TARGET_NAME}" ${PROJECT_NAME})
