@@ -4,7 +4,6 @@
 
 # CLion
 .idea/
-!.idea/cmake.xml
 
 # Project output
 gen/

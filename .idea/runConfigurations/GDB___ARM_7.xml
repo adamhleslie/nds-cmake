@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GDB - ARM 7" type="CLion_Remote" version="1" remoteCommand="localhost:3333" symbolFile="$PROJECT_DIR$/out/debug/arm7/arm7.elf" sysroot="">
+    <debugger kind="GDB" isBundled="true" />
+    <pathMapping remote=":/mnt/c/Users/Adam/Dev/nds/nds-cmake" local="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>
