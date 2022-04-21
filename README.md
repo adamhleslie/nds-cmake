@@ -1,7 +1,7 @@
 # nds-cmake
 Homebrew Nintendo DS build system
 
-###Features:
+### Features:
 - Builds separate arm7 and arm9 binaries
 - Shared code between the arm7 and arm9
 - Automated PNG conversion through Grit
