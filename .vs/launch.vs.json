@@ -1,66 +1,68 @@
 {
-    "version": "0.2.1",
-    "defaults": {},
-    "configurations": [
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      // DEFAULTS //
+      "type": "cppdbg",
+      "project": "CMakeLists.txt",
+      "projectTarget": // "PROJECT NAME HERE",
+      "cwd"
+      :
+      "${workspaceRoot}",
+      "MIMode": "gdb",
+      "inheritEnvironments": [
+        "${cpp.activeConfiguration}"
+      ],
+      "miDebuggerPath": "${env.gdbExe}",
+      "miDebuggerServerAddress": "localhost:${env.gdbPort}",
+      "launchCompleteCommand": "None",
+      "setupCommands": [
         {
-            // DEFAULTS //
-            "type": "cppdbg",
-            "project": "CMakeLists.txt",
-            "projectTarget": // "PROJECT NAME HERE",
-            "cwd": "${workspaceRoot}",
-            "MIMode": "gdb",
-            "inheritEnvironments": [
-                "${cpp.activeConfiguration}"
-            ],
-            "miDebuggerPath": "${env.gdbExe}",
-            "miDebuggerServerAddress": "localhost:${env.gdbPort}",
-            "launchCompleteCommand": "None",
-            "setupCommands": [
-                {
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm9gdb ${env.gdbPort}",
-                    "ignoreFailures": false
-                }
-            ],
-            "filterStderr": true,
-            "filterStdout": true,
-
-            // TARGET SPECIFIC //
-            "name": "ARM 9",
-            "program": "${env.arm9Exe}"
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         },
         {
-            // DEFAULTS //
-            "type": "cppdbg",
-            "project": "CMakeLists.txt",
-            "projectTarget": // "PROJECT NAME HERE",
-            "cwd": "${workspaceRoot}",
-            "MIMode": "gdb",
-            "inheritEnvironments": [
-                "${cpp.activeConfiguration}"
-            ],
-            "miDebuggerPath": "${env.gdbExe}",
-            "miDebuggerServerAddress": "localhost:${env.gdbPort}",
-            "launchCompleteCommand": "None",
-            "setupCommands": [
-                {
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm7gdb ${env.gdbPort}",
-                    "ignoreFailures": false
-                }
-            ],
-            "filterStderr": true,
-            "filterStdout": true,
-
-            // TARGET SPECIFIC //
-            "name": "ARM 7",
-            "program": "${env.arm7Exe}"
+          "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm9gdb ${env.gdbPort}",
+          "ignoreFailures": false
         }
-    ]
+      ],
+      "filterStderr": true,
+      "filterStdout": true,
+      // TARGET SPECIFIC //
+      "name": "ARM 9",
+      "program": "${env.arm9Exe}"
+    },
+    {
+      // DEFAULTS //
+      "type": "cppdbg",
+      "project": "CMakeLists.txt",
+      "projectTarget": // "PROJECT NAME HERE",
+      "cwd"
+      :
+      "${workspaceRoot}",
+      "MIMode": "gdb",
+      "inheritEnvironments": [
+        "${cpp.activeConfiguration}"
+      ],
+      "miDebuggerPath": "${env.gdbExe}",
+      "miDebuggerServerAddress": "localhost:${env.gdbPort}",
+      "launchCompleteCommand": "None",
+      "setupCommands": [
+        {
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "text": "shell start \"\" \"${env.desmumeExe}\" \"${env.ndsExe}\" --arm7gdb ${env.gdbPort}",
+          "ignoreFailures": false
+        }
+      ],
+      "filterStderr": true,
+      "filterStdout": true,
+      // TARGET SPECIFIC //
+      "name": "ARM 7",
+      "program": "${env.arm7Exe}"
+    }
+  ]
 }

@@ -27,36 +27,31 @@
 		distribution.
 
 ---------------------------------------------------------------------------------*/
-#include <nds.h>
+
 #include <dswifi7.h>
 #include <maxmod7.h>
+#include <nds.h>
+#include "Example.hpp"
 
-#include <example.hpp>
-
-//---------------------------------------------------------------------------------
-void VblankHandler(void) {
-//---------------------------------------------------------------------------------
+void VblankHandler()
+{
 	Wifi_Update();
 }
 
-
-//---------------------------------------------------------------------------------
-void VcountHandler() {
-//---------------------------------------------------------------------------------
+void VcountHandler()
+{
 	inputGetAndSend();
 }
 
 volatile bool exitflag = false;
 
-//---------------------------------------------------------------------------------
-void powerButtonCB() {
-//---------------------------------------------------------------------------------
+void powerButtonCB()
+{
 	exitflag = true;
 }
 
-//---------------------------------------------------------------------------------
-int main() {
-//---------------------------------------------------------------------------------
+int main()
+{
 	readUserSettings();
 
 	irqInit();
@@ -76,20 +71,24 @@ int main() {
 	irqSet(IRQ_VCOUNT, VcountHandler);
 	irqSet(IRQ_VBLANK, VblankHandler);
 
-	irqEnable( IRQ_VBLANK | IRQ_VCOUNT | IRQ_NETWORK);
-	
+	irqEnable(IRQ_VBLANK | IRQ_VCOUNT | IRQ_NETWORK);
+
 	setPowerButtonCB(powerButtonCB);
-  
-  example ex(12);
-  ex.val(17);
-  int v = ex.val();
-  
+
+	Example ex(12);
+	ex.val(17);
+	int v = ex.val();
+
 	// Keep the ARM7 mostly idle
-	while (!exitflag) {
-		if ( 0 == (REG_KEYINPUT & (KEY_SELECT | KEY_START | KEY_L | KEY_R))) {
+	while (!exitflag)
+	{
+		if (0 == (REG_KEYINPUT & (KEY_SELECT | KEY_START | KEY_L | KEY_R)))
+		{
 			exitflag = true;
 		}
+
 		swiWaitForVBlank();
 	}
+
 	return 0;
 }

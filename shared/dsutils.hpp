@@ -6,8 +6,7 @@
 
 #include <nds.h>
 
-inline
-int ds_float(int real, short frac)
+inline int ds_float(int real, short frac)
 {
-    return ( (real << 8) | frac );
+	return ((real << 8) | frac);
 }

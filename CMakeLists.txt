@@ -15,9 +15,9 @@ message(STATUS "Using C compiler: " ${CMAKE_C_COMPILER})
 message(STATUS "Using C++ compiler: " ${CMAKE_CXX_COMPILER})
 
 # PROJECT #
-if(NOT DEFINED ENV{PROJECT})
-    message(FATAL_ERROR "Please set PROJECT in your environment")
-endif()
+if (NOT DEFINED ENV{PROJECT})
+	message(FATAL_ERROR "Please set PROJECT in your environment")
+endif ()
 project("$ENV{PROJECT}")
 
 # Compiler Flags
@@ -32,7 +32,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} ${warning_flags} ${cpp_flags} ${
 
 # PROJECT - ASSETS #
 set(ASSETS_PATH "${CMAKE_SOURCE_DIR}/assets")
-set(ASSETS_GEN  "${ASSETS_PATH}/gen")
+set(ASSETS_GEN "${ASSETS_PATH}/gen")
 include_directories(${ASSETS_GEN})
 
 # grit - Images
